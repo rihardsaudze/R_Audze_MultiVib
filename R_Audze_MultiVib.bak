@@ -1,0 +1,211 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "BC548 MultiVibrator"
+Date "2020-02-26"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery BT?
+U 1 1 5E562185
+P 2600 4100
+F 0 "BT?" H 2708 4146 50  0000 L CNN
+F 1 "9V" H 2708 4055 50  0000 L CNN
+F 2 "" V 2600 4160 50  0001 C CNN
+F 3 "~" V 2600 4160 50  0001 C CNN
+	1    2600 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E56220C
+P 3100 3700
+F 0 "D?" V 3138 3583 50  0000 R CNN
+F 1 "LED" V 3047 3583 50  0000 R CNN
+F 2 "" H 3100 3700 50  0001 C CNN
+F 3 "~" H 3100 3700 50  0001 C CNN
+	1    3100 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E56224F
+P 4550 3700
+F 0 "D?" V 4588 3583 50  0000 R CNN
+F 1 "LED" V 4497 3583 50  0000 R CNN
+F 2 "" H 4550 3700 50  0001 C CNN
+F 3 "~" H 4550 3700 50  0001 C CNN
+	1    4550 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E562292
+P 3100 4100
+F 0 "R?" V 3200 4050 50  0000 L CNN
+F 1 "470R" V 3100 4000 50  0000 L CNN
+F 2 "" V 3030 4100 50  0001 C CNN
+F 3 "~" H 3100 4100 50  0001 C CNN
+	1    3100 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E5622C0
+P 3600 4100
+F 0 "R?" V 3700 4050 50  0000 L CNN
+F 1 "47k" V 3600 4050 50  0000 L CNN
+F 2 "" V 3530 4100 50  0001 C CNN
+F 3 "~" H 3600 4100 50  0001 C CNN
+	1    3600 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E5622F0
+P 4000 4100
+F 0 "R?" V 4100 4050 50  0000 L CNN
+F 1 "47k" V 4000 4050 50  0000 L CNN
+F 2 "" V 3930 4100 50  0001 C CNN
+F 3 "~" H 4000 4100 50  0001 C CNN
+	1    4000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E562318
+P 4550 4100
+F 0 "R?" V 4650 4050 50  0000 L CNN
+F 1 "470R" V 4550 4000 50  0000 L CNN
+F 2 "" V 4480 4100 50  0001 C CNN
+F 3 "~" H 4550 4100 50  0001 C CNN
+	1    4550 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C?
+U 1 1 5E56251E
+P 3350 4450
+F 0 "C?" H 3400 4550 50  0000 C CNN
+F 1 "47uF" H 3450 4350 50  0000 C CNN
+F 2 "" H 3350 4450 50  0001 C CNN
+F 3 "~" H 3350 4450 50  0001 C CNN
+	1    3350 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP1 C?
+U 1 1 5E562593
+P 4300 4450
+F 0 "C?" H 4350 4550 50  0000 C CNN
+F 1 "47uF" H 4400 4350 50  0000 C CNN
+F 2 "" H 4300 4450 50  0001 C CNN
+F 3 "~" H 4300 4450 50  0001 C CNN
+	1    4300 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 4250 3100 4450
+Wire Wire Line
+	3100 4450 3200 4450
+Wire Wire Line
+	3500 4450 3600 4450
+Wire Wire Line
+	3600 4450 3600 4250
+Wire Wire Line
+	3100 3850 3100 3950
+Wire Wire Line
+	3600 3950 3600 3450
+Wire Wire Line
+	3600 3450 3100 3450
+Wire Wire Line
+	3100 3450 3100 3550
+Wire Wire Line
+	3600 3450 4000 3450
+Wire Wire Line
+	4550 3450 4550 3550
+Connection ~ 3600 3450
+Wire Wire Line
+	4550 3950 4550 3850
+Wire Wire Line
+	4550 4250 4550 4450
+Wire Wire Line
+	4550 4450 4450 4450
+Wire Wire Line
+	4150 4450 4000 4450
+Wire Wire Line
+	4000 4450 4000 4250
+Wire Wire Line
+	4000 3950 4000 3450
+Connection ~ 4000 3450
+Wire Wire Line
+	4000 3450 4550 3450
+$Comp
+L Transistor_BJT:BC548 Q?
+U 1 1 5E562A15
+P 3200 4850
+F 0 "Q?" H 3390 4896 50  0000 L CNN
+F 1 "BC548" H 3390 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3400 4775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3200 4850 50  0001 L CNN
+	1    3200 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q?
+U 1 1 5E562A81
+P 4450 4850
+F 0 "Q?" H 4641 4896 50  0000 L CNN
+F 1 "BC548" H 4641 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4650 4775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4450 4850 50  0001 L CNN
+	1    4450 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 4450 3100 4650
+Connection ~ 3100 4450
+Wire Wire Line
+	4000 4450 3850 4450
+Wire Wire Line
+	3850 4450 3850 4850
+Wire Wire Line
+	3850 4850 3400 4850
+Connection ~ 4000 4450
+Wire Wire Line
+	3600 4450 3600 4700
+Wire Wire Line
+	3600 4700 4150 4700
+Wire Wire Line
+	4150 4700 4150 4850
+Wire Wire Line
+	4150 4850 4250 4850
+Connection ~ 3600 4450
+Wire Wire Line
+	4550 4450 4550 4650
+Connection ~ 4550 4450
+Wire Wire Line
+	2600 3900 2600 3450
+Connection ~ 3100 3450
+Wire Wire Line
+	2600 3450 3100 3450
+Wire Wire Line
+	2600 4300 2600 5150
+Wire Wire Line
+	2600 5150 3100 5150
+Wire Wire Line
+	4550 5150 4550 5050
+Wire Wire Line
+	3100 5050 3100 5150
+Connection ~ 3100 5150
+Wire Wire Line
+	3100 5150 4550 5150
+$EndSCHEMATC
