@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:R_Audze_MultiVib-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -92,17 +93,6 @@ F 3 "~" H 4550 4100 50  0001 C CNN
 $EndComp
 $Comp
 L Device:CP1 C?
-U 1 1 5E56251E
-P 3350 4450
-F 0 "C?" H 3400 4550 50  0000 C CNN
-F 1 "47uF" H 3450 4350 50  0000 C CNN
-F 2 "" H 3350 4450 50  0001 C CNN
-F 3 "~" H 3350 4450 50  0001 C CNN
-	1    3350 4450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:CP1 C?
 U 1 1 5E562593
 P 4300 4450
 F 0 "C?" H 4350 4550 50  0000 C CNN
@@ -132,7 +122,6 @@ Wire Wire Line
 	3600 3450 4000 3450
 Wire Wire Line
 	4550 3450 4550 3550
-Connection ~ 3600 3450
 Wire Wire Line
 	4550 3950 4550 3850
 Wire Wire Line
@@ -148,49 +137,19 @@ Wire Wire Line
 Connection ~ 4000 3450
 Wire Wire Line
 	4000 3450 4550 3450
-$Comp
-L Transistor_BJT:BC548 Q?
-U 1 1 5E562A15
-P 3200 4850
-F 0 "Q?" H 3390 4896 50  0000 L CNN
-F 1 "BC548" H 3390 4805 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3400 4775 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3200 4850 50  0001 L CNN
-	1    3200 4850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:BC548 Q?
-U 1 1 5E562A81
-P 4450 4850
-F 0 "Q?" H 4641 4896 50  0000 L CNN
-F 1 "BC548" H 4641 4805 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4650 4775 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4450 4850 50  0001 L CNN
-	1    4450 4850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3100 4450 3100 4650
 Connection ~ 3100 4450
 Wire Wire Line
 	4000 4450 3850 4450
-Wire Wire Line
-	3850 4450 3850 4850
-Wire Wire Line
-	3850 4850 3400 4850
 Connection ~ 4000 4450
 Wire Wire Line
 	3600 4450 3600 4700
 Wire Wire Line
 	3600 4700 4150 4700
-Wire Wire Line
-	4150 4700 4150 4850
-Wire Wire Line
-	4150 4850 4250 4850
 Connection ~ 3600 4450
 Wire Wire Line
-	4550 4450 4550 4650
+	4550 4450 4550 4600
 Connection ~ 4550 4450
 Wire Wire Line
 	2600 3900 2600 3450
@@ -198,14 +157,58 @@ Connection ~ 3100 3450
 Wire Wire Line
 	2600 3450 3100 3450
 Wire Wire Line
-	2600 4300 2600 5150
+	2600 4300 2600 5450
 Wire Wire Line
-	2600 5150 3100 5150
+	2600 5450 3100 5450
 Wire Wire Line
-	4550 5150 4550 5050
+	4550 5450 4550 5300
+Connection ~ 3100 5450
 Wire Wire Line
-	3100 5050 3100 5150
-Connection ~ 3100 5150
+	3100 5450 4550 5450
+Connection ~ 3600 3450
+$Comp
+L Device:CP1 C?
+U 1 1 5E56251E
+P 3350 4450
+F 0 "C?" H 3400 4550 50  0000 C CNN
+F 1 "47uF" H 3450 4350 50  0000 C CNN
+F 2 "" H 3350 4450 50  0001 C CNN
+F 3 "~" H 3350 4450 50  0001 C CNN
+	1    3350 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L project_library:BC847BS U?
+U 1 1 5E5F7330
+P 3250 5000
+F 0 "U?" H 3350 4700 50  0000 L CNN
+F 1 "BC847BS" H 3050 5300 50  0000 L CNN
+F 2 "" H 3250 4900 50  0001 C CNN
+F 3 "" H 3250 4900 50  0001 C CNN
+	1    3250 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L project_library:BC847BS U?
+U 2 1 5E5F737F
+P 4700 4950
+F 0 "U?" H 4600 5250 50  0000 R CNN
+F 1 "BC847BS" H 4850 4650 50  0000 R CNN
+F 2 "" H 4700 4850 50  0001 C CNN
+F 3 "" H 4700 4850 50  0001 C CNN
+	2    4700 4950
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
-	3100 5150 4550 5150
+	3850 5350 3250 5350
+Wire Wire Line
+	3850 4450 3850 5350
+Wire Wire Line
+	3100 5350 3100 5450
+Wire Wire Line
+	4150 5350 4700 5350
+Wire Wire Line
+	4700 5350 4700 5300
+Wire Wire Line
+	4150 4700 4150 5350
 $EndSCHEMATC
